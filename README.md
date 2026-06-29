@@ -9,3 +9,5 @@ names, and the assets are duped between them. Having both is redundant.
 
 Also every script where has been writen with GDScript access in mind, in all
 places that make sense at least.
+Scripts like RayDict and Property cannot be accessed via GDScript,
+so counterparts have been provided.
