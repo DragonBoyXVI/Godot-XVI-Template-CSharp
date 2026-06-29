@@ -5,19 +5,22 @@
 [sub_resource type="GDScript" id="GDScript_6huh5"]
 script/source = "extends Control
 
-var showing := false;
+
+func _ready() -> void:
+	
+	TranslationImporter.ParseDirForFiles( \"res://XVI Assets/Text/\", true );
+	TranslationServer.set_locale( \"es\" );
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if ( event is InputEventKey ):
 		if event.pressed:
 			if event.keycode == KEY_SPACE:
 				
-				if showing:
-					XVIControlAnimation.CloseWindow( $TextureRect, 0.125 );
+				var messages: PackedStringArray = TranslationImporter.GetExtraData( \"key_some_array\", TranslationServer.get_locale() );
+				if ( messages ):
+					print( messages[ randi() % messages.size() ] );
 				else:
-					XVIControlAnimation.OpenWindow( $TextureRect, true, 0.125 );
-				
-				showing = not showing;
+					print( \"No message!\" );
 "
 
 [node name="Control" type="Control" unique_id=1739530941]
