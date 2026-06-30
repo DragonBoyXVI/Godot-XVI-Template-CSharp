@@ -7,20 +7,13 @@ script/source = "extends Control
 
 
 func _ready() -> void:
-	
-	TranslationImporter.ParseDirForFiles( \"res://XVI Assets/Text/\", true );
-	TranslationServer.set_locale( \"es\" );
+	pass;
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if ( event is InputEventKey ):
 		if event.pressed:
 			if event.keycode == KEY_SPACE:
-				
-				var messages: PackedStringArray = TranslationImporter.GetExtraData( \"key_some_array\", TranslationServer.get_locale() );
-				if ( messages ):
-					print( messages[ randi() % messages.size() ] );
-				else:
-					print( \"No message!\" );
+				pass;
 "
 
 [node name="Control" type="Control" unique_id=1739530941]

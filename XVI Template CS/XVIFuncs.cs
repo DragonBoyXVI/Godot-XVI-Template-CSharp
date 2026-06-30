@@ -13,7 +13,7 @@ public abstract partial class XVIFuncs : GodotObject
     /// Sets ALL processes on a node to enabled or disabled, depending on the "enabled" argument.
     /// By default, this disables all node processes.
     /// </summary>
-    static void SetNodeProcesses( Node node, bool enabled = false ) {
+    public static void SetNodeProcesses( Node node, bool enabled = false ) {
         node.SetProcess( enabled );
         node.SetPhysicsProcess( enabled );
         node.SetProcessInput( enabled );
