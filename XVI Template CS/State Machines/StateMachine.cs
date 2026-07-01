@@ -102,12 +102,12 @@ public partial class StateMachine : Node {
     /// </summary>
     /// <param name="stateName">The name of the state to change to.</param>
     public void ChangeState( StringName stateName ) {
-        State state;
-        if ( !StateCache.TryGetValue( stateName, out state ) ) {
-            GD.PushError( "Trying to get an invalid state: ", stateName );
+        if (!StateCache.TryGetValue(stateName, out State state))
+        {
+            GD.PushError("Trying to get an invalid state: ", stateName);
             return;
         }
-        
+
         if ( CurrentState != null ) {
             if ( !CurrentState.CanSwitchState( state ) ) {
                 return;

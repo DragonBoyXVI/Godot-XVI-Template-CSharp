@@ -9,7 +9,8 @@ script/source = "extends Control
 func _unhandled_key_input(event: InputEvent) -> void:
 	if ( event is InputEventKey ):
 		if event.pressed:
-			if event.keycode == KEY_SPACE:pass;
+			if event.keycode == KEY_SPACE:
+				pass;
 "
 
 [node name="Control" type="Control" unique_id=1739530941]
