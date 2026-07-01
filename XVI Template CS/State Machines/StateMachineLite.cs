@@ -7,6 +7,6 @@ namespace DragonXVI.StateMachines;
 /// Basically an object to be used in switch statement
 /// </summary>
 //[GlobalClass, Tool]
-public partial class StateMachineLite : RefCounted
+public partial class _StateMachineLite : RefCounted
 {
 }
