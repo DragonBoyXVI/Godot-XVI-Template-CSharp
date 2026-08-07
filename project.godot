@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="XVI-Template-CSharp"
-run/main_scene="uid://deuqsxffufcw5"
 config/features=PackedStringArray("4.7", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 

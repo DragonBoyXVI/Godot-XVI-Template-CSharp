@@ -31,7 +31,7 @@ public abstract partial class XVIFuncs : GodotObject
     /// All of the arguments are the same as the resource loader thread ones, including the progress array.
     /// More of a test than anything, not gdscript friendly qwqqqq
     /// </summary>
-    public static async Task<Resource> LoadResourceCoroutine( string resourcePath, string typeHint = "", Array progress = [] )
+    public static async Task<Resource> LoadResourceCoroutine( string resourcePath, string typeHint = "" )
     {
         Error err = ResourceLoader.LoadThreadedRequest( resourcePath, typeHint );
         if ( err != Error.Ok ) {
@@ -40,7 +40,7 @@ public abstract partial class XVIFuncs : GodotObject
         }
         
         while (true) {
-            var loadStatus = ResourceLoader.LoadThreadedGetStatus( resourcePath, progress );
+            var loadStatus = ResourceLoader.LoadThreadedGetStatus( resourcePath );
             if ( loadStatus == ResourceLoader.ThreadLoadStatus.Loaded ) {
                 break;
             } else if ( loadStatus == ResourceLoader.ThreadLoadStatus.InProgress ) {
