@@ -41,3 +41,8 @@ via code (e.g. Setting the CollisionLayer and CollisionMask of a CharacterBody2D
 ## State machines
 
 A node based state machine implementation, generalized for most use cases.
+
+## Assets
+Art and SFX by DragonXVI
+Scripts by DragonXVI
+SFX by memoryargument
