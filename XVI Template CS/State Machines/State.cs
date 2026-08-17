@@ -22,18 +22,18 @@ public abstract partial class State : Node {
     protected void RequestStateChange( StringName stateName ) {
         EmitSignal( SignalName.StateChangeRequest, stateName );
     }
-    
+
     public override void _Ready() {
         if ( Engine.IsEditorHint() ) {
             XVIFuncs.SetNodeProcesses( this, false );
         }
     }
-    
+
     /// <summary>
     /// Called by the state machine when this state is entered.
     /// </summary>
     public virtual void _EnterState() {}
-    
+
     /// <summary>
     /// Called by the state machine when leaving this state.
     /// </summary>

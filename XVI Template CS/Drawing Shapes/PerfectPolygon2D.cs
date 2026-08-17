@@ -1,14 +1,14 @@
-using System;
 using System.Collections.Generic;
 using Godot;
 
 namespace DragonXVI.Drawings;
 
 /// <summary>
-/// Draws a multipoint polygon, like pentagons.
-/// 
+/// <para>Draws a multipoint polygon, like pentagons.</para>
+/// <para>
 /// Does nor provide any of the functionality of actual polygon nodes.
 /// Add enough points and this is basically just a circle lol.
+/// </para>
 /// </summary>
 [GlobalClass, Tool]
 public partial class PerfectPolygon2D : CircleDrawing2D {
@@ -28,7 +28,7 @@ public partial class PerfectPolygon2D : CircleDrawing2D {
     public override void _Draw()
     {
         if ( Flags == DrawFlags.None ) return;
-        
+
         List<Vector2> PointArray = [];
         for (int i = 0; i < Points; i++)
         {
@@ -37,7 +37,7 @@ public partial class PerfectPolygon2D : CircleDrawing2D {
             vector *= Radius;
             PointArray.Add( vector + Offset );
         }
-        
+
         bool antialiasing = Flags.HasFlag( DrawFlags.Antialiasing );
         if ( Flags.HasFlag( DrawFlags.Center ) ) {
             DrawColoredPolygon([.. PointArray], CenterColor );

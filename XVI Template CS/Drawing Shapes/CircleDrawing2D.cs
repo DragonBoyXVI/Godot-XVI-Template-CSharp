@@ -35,7 +35,7 @@ public partial class CircleDrawing2D : Drawing2D {
     public override void _Draw()
     {
         if ( Flags == DrawFlags.None ) return;
-        
+
         bool antialiasing = Flags.HasFlag( DrawFlags.Antialiasing );
         if ( Flags.HasFlag( DrawFlags.Center ) ) {
             DrawCircle( Offset, Radius, CenterColor, true, -1.0f, antialiasing );
