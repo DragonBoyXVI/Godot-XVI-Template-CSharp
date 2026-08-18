@@ -32,7 +32,6 @@ public partial class RandomRangeTimer : XVITimer
                 WaitTime = value;
             }
         }
-
         get => minRandomTime;
     }
     private float minRandomTime = 1f;

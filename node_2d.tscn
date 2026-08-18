@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bf0ipywlclbx4"]
+
+[ext_resource type="Script" uid="uid://d0pgddsj2sgea" path="res://XVI Template CS/Timers/RandomRangeTimer.cs" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://dp076mw7pb8x4" path="res://XVI Template CS/Timers/RandomMedianTimer.cs" id="2_0e48y"]
+
+[sub_resource type="GDScript" id="GDScript_m2pyp"]
+script/source = "extends Node2D
+
+@export var timers: Array[ Timer ] = [];
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	for timer in timers:
+		timer.timeout.connect( print.bind( timer.name ) );
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed:
+			if event.keycode == KEY_SPACE:
+				for timer in timers:
+					if ( timer is XVITimer ):
+						timer.StartExt();
+					else:
+						timer.start();
+"
+
+[node name="Node2D" type="Node2D" unique_id=361621260 node_paths=PackedStringArray("timers")]
+script = SubResource("GDScript_m2pyp")
+timers = [NodePath("Timer"), NodePath("RandomRangeTimer"), NodePath("RandomMedianTimer")]
+
+[node name="Timer" type="Timer" parent="." unique_id=438063278]
+one_shot = true
+
+[node name="RandomRangeTimer" type="Timer" parent="." unique_id=1030406628]
+one_shot = true
+script = ExtResource("1_wtcfe")
+MaxRandomTime = 1.5
+MinRandomTime = 0.5
+metadata/_custom_type_script = "uid://d0pgddsj2sgea"
+
+[node name="RandomMedianTimer" type="Timer" parent="." unique_id=1797478876]
+one_shot = true
+script = ExtResource("2_0e48y")
+metadata/_custom_type_script = "uid://dp076mw7pb8x4"
