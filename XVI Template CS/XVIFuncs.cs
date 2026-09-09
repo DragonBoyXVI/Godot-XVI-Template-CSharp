@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Godot;
 
 namespace DragonXVI
@@ -22,43 +21,6 @@ namespace DragonXVI
             node.SetProcessShortcutInput(enabled);
             node.SetProcessUnhandledInput(enabled);
             node.SetProcessUnhandledKeyInput(enabled);
-        }
-
-        /// <summary>
-        /// A neat wrapper for the functions in [ResourceLoader].
-        /// A standardized way to load a resource on a thread using await.
-        /// 
-        /// All of the arguments are the same as the resource loader thread ones, including the progress array.
-        /// More of a test than anything, not gdscript friendly qwqqqq
-        /// </summary>
-        public static async Task<Resource> LoadResourceCoroutine(string resourcePath, string typeHint = "")
-        {
-            Error err = ResourceLoader.LoadThreadedRequest(resourcePath, typeHint);
-            if (err != Error.Ok)
-            {
-                GD.PushError($"Could not load resource {resourcePath} on thread: {err}");
-                return null;
-            }
-
-            while (true)
-            {
-                ResourceLoader.ThreadLoadStatus loadStatus = ResourceLoader.LoadThreadedGetStatus(resourcePath);
-                if (loadStatus == ResourceLoader.ThreadLoadStatus.Loaded)
-                {
-                    break;
-                }
-                else if (loadStatus == ResourceLoader.ThreadLoadStatus.InProgress)
-                {
-                    SceneTree tree = (SceneTree)Engine.GetMainLoop();
-                    _ = await tree.ToSignal(tree, SceneTree.SignalName.ProcessFrame);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-            return ResourceLoader.LoadThreadedGet(resourcePath);
         }
     }
 }
