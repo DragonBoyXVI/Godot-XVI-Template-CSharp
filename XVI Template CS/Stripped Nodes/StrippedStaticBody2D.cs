@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
 
-namespace DragonXVI.Stripped
+namespace DragonXVI.GodotTemplate.Stripped
 {
     /// <summary>
     /// A static body with some properties disabled, so they can be enabled in code instead.

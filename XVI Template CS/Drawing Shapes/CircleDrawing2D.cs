@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI.Drawings;
+namespace DragonXVI.GodotTemplate.Drawings;
 
 /// <summary>
 /// Draws a circle.

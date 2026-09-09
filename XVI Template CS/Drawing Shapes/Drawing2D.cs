@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
 
-namespace DragonXVI.Drawings;
+namespace DragonXVI.GodotTemplate.Drawings;
 
 /// <summary>
 /// Base class for drawing shape nodes.

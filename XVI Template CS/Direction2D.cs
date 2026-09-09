@@ -1,6 +1,6 @@
 using System;
 
-namespace DragonXVI;
+namespace DragonXVI.GodotTemplate;
 
 /// <summary>
 /// A simple helper for 2D directions. Both cardinal and diagnal.

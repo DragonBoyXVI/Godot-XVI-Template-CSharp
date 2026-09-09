@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI.Timers;
+namespace DragonXVI.GodotTemplate.Timers;
 
 /// <summary>
 /// Supply this with a min and max time and this will pick a random time between

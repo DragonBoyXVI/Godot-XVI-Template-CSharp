@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI
+namespace DragonXVI.GodotTemplate
 {
     /// <summary>
     /// A class that holds utility functions.

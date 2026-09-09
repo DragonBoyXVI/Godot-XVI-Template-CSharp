@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI;
+namespace DragonXVI.GodotTemplate;
 
 /// <summary>
 /// Helper class for godot dictionaries returned by ray cast quiries.

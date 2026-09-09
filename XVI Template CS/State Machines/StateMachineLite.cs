@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI.StateMachines;
+namespace DragonXVI.GodotTemplate.StateMachines;
 
 #pragma warning disable
 

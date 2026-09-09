@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Godot;
 
-namespace DragonXVI.StateMachines;
+namespace DragonXVI.GodotTemplate.StateMachines;
 
 [GlobalClass, Tool, Icon( "uid://d1tih0h8h2lhj" )]
 public partial class StateMachine : Node {

@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI
+namespace DragonXVI.GodotTemplate
 {
     /// <summary>
     /// Global class that animates control nodes.

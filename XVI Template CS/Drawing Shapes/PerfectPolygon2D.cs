@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Godot;
 
-namespace DragonXVI.Drawings;
+namespace DragonXVI.GodotTemplate.Drawings;
 
 /// <summary>
 /// <para>Draws a multipoint polygon, like pentagons.</para>

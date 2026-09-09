@@ -2,7 +2,7 @@
 using Godot;
 using Godot.Collections;
 
-namespace DragonXVI.Translation
+namespace DragonXVI.GodotTemplate.TranslationSystem
 {
     /// <summary>
     /// This class manages importing translations from JSON files.
@@ -51,7 +51,7 @@ namespace DragonXVI.Translation
         /// Returns an empty string if that data does not exist.
         /// </summary>
         /// <param name="translationDict">Godot dict full of the translations you want.</param>
-        public static Godot.Translation ParseDictToTranslation(Dictionary translationDict)
+        public static Translation ParseDictToTranslation(Dictionary translationDict)
         {
             if (!translationDict.ContainsKey(LocaleCheckKey))
             {
@@ -59,7 +59,7 @@ namespace DragonXVI.Translation
                 return null;
             }
 
-            Godot.Translation translation = new();
+            Translation translation = new();
             Dictionary<string, Variant> extra = [];
             foreach (Variant key in translationDict.Keys)
             {

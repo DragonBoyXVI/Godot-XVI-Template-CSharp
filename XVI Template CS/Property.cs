@@ -1,6 +1,6 @@
 using Godot;
 
-namespace DragonXVI;
+namespace DragonXVI.GodotTemplate;
 
 /// <summary>
 /// Helper class for property dictionaries.

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using Godot;
 
-namespace DragonXVI.Elements
+namespace DragonXVI.GodotTemplate.Elements
 {
     /// <summary>
     /// A Pokemon esque table for my elements.

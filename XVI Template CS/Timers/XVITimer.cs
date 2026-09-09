@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
 
-namespace DragonXVI.Timers;
+namespace DragonXVI.GodotTemplate.Timers;
 
 /// <summary>
 /// Base class for custom timers.
