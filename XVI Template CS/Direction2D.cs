@@ -1,5 +1,3 @@
-using System;
-
 namespace DragonXVI.GodotTemplate;
 
 /// <summary>
